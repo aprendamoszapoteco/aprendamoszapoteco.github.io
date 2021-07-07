@@ -1,0 +1,16 @@
+.button, .platforms {
+  background-color: #0066B8;
+  color: white;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.button:hover {
+  background-color: #04599e;
+  color: white;
+}
+.platforms {
+  border-left: solid 2px #3E3E3E;
+}
+.platforms:hover {
+  color: white;
+}
