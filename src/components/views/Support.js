@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+
 import data from '../../data/support';
+import Subtitle from '../commons/Subtitle';
 
 const EmailContact = styled.a`
   color: #008DFF;
@@ -20,7 +22,7 @@ const Support = () => {
       style={ {backgroundColor: '#F8F8F8'} }
       id="support"
     >
-      <h5 className="text-center fw-bold mb-3">¿No te funciono el enlace?</h5>
+      <Subtitle>¿No te funciono el enlace?</Subtitle>
       <p>Comunícate bajo los siguientes enlaces:</p>
       <ul style={ {listStyleType: 'none', padding: 0} }>
         { data.map((email, index) =>
