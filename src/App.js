@@ -10,6 +10,7 @@ import './styles/index.css';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Content from './pages/Content';
 
 const App = () => {
   return (
@@ -21,7 +22,7 @@ const App = () => {
             <p>Inicio</p>
           </Route>
           <Route path="/contenido">
-            <p>Contenido</p>
+            <Content />
           </Route>
           <Route path="/acerca-de">
             <p>Acerca de</p>
