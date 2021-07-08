@@ -16,9 +16,11 @@ const Presentation = () => {
         <p><a href="#support" style={ {textDecoration: 'none'} }>presiona aqui</a></p>
       </div>
       <div>
-        <picture className="img-fluid">
+        <picture>
           <source type="image/webp"
-            srcSet={ require('../../img/start/app.webp').default } />
+            srcSet={ require('../../img/start/app.webp').default }
+            className="img-fluid"
+          />
           <img src={ require('../../img/start/app.png') }
             alt="Captura de la aplicación" className="img-fluid" />
         </picture>
