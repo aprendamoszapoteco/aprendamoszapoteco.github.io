@@ -5,7 +5,7 @@ import styled from 'styled-components';
 /**
  * Properties:
  *  pathImage -> A path that starts after img.
- *    For example, if the image is in img/about/image.webp,
+ *    For example, if the image is in img/about/image.png,
  *    the path would be: about/image.
  *  imageRight -> If the image should be on the right,
  *    by default it is positioned on the left.
@@ -44,7 +44,14 @@ const CardInformation = ({ pathImage, imageRight = false, title, children }) => 
         className="mb-3 mb-lg-0 d-flex justify-content-center align-items-center"
         style={ {width: '200px', height: '200px'} }
       >
-        <img src={ require(`../../img/${pathImage}.webp`).default } className="mw-100 mh-100" />
+        <picture>
+          <source
+            type="image/webp"
+            srcSet={ require(`../../img/${pathImage}.webp`).default }
+            className="mw-100 mh-100"
+          />
+          <img src={ require(`../../img/${pathImage}.png`).default } className="mw-100 mh-100" />
+        </picture>
       </div>
       <Information className={ classSpacing }>
         <Title>{ title }</Title>
