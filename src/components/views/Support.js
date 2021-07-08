@@ -15,7 +15,11 @@ const EmailContact = styled.a`
 
 const Support = () => {
   return (
-    <div className="p-3" style={ {backgroundColor: '#F8F8F8'} }>
+    <div
+      className="p-3"
+      style={ {backgroundColor: '#F8F8F8'} }
+      id="support"
+    >
       <h5 className="text-center fw-bold mb-3">¿No te funciono el enlace?</h5>
       <p>Comunícate bajo los siguientes enlaces:</p>
       <ul style={ {listStyleType: 'none', padding: 0} }>

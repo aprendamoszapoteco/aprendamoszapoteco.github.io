@@ -22,13 +22,13 @@ const ButtonMain = () => {
       >
         <p style={ {
           marginBottom: '4px',
-          fontSize: '28px',
+          fontSize: '18px',
           fontWeight: 'bold'
         } }
         >Descarga para { platform === 'Win32' ? 'Windows' : 'Linux' }</p>
         <p style={ {
           marginBottom: '4px',
-          fontSize: '25px'
+          fontSize: '16px'
         } }
         >Versión estable</p>
       </a>
