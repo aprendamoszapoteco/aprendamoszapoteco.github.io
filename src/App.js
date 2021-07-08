@@ -1,4 +1,5 @@
 import React from 'react';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -7,9 +8,26 @@ import '@fontsource/roboto';
 
 import './styles/index.css';
 
+import Header from './components/Header';
+
 const App = () => {
   return (
-    <p>Hola mundo</p>
+    <BrowserRouter basename={ process.env.PUBLIC_URL }>
+      <Header />
+      <main>
+        <Switch>
+          <Route exact path="/">
+            <p>Inicio</p>
+          </Route>
+          <Route path="/contenido">
+            <p>Contenido</p>
+          </Route>
+          <Route path="/acerca-de">
+            <p>Acerca de</p>
+          </Route>
+        </Switch>
+      </main>
+    </BrowserRouter>
   );
 };
 
