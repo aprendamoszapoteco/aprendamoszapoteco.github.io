@@ -1,0 +1,13 @@
+.button-option{
+  background: #0066B8;
+  color: white;
+  line-height: 1rem;
+}
+.button-option > .small-letter{
+  color: #ffffffe6;
+  font-size: 0.8rem;
+}
+.button-option:hover{
+  color: white;
+  background-color: #04599e;
+}
