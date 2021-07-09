@@ -12,6 +12,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Content from './pages/Content';
 import About from './pages/About';
+import Home from './pages/Home';
 
 const App = () => {
   return (
@@ -20,7 +21,7 @@ const App = () => {
       <main>
         <Switch>
           <Route exact path="/">
-            <p>Inicio</p>
+            <Home />
           </Route>
           <Route path="/contenido">
             <Content />

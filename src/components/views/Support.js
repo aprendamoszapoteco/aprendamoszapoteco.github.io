@@ -19,7 +19,7 @@ const Support = () => {
   return (
     <div
       className="p-3"
-      style={ {backgroundColor: '#F8F8F8'} }
+      style={ {backgroundColor: '#DCEEF2'} }
       id="support"
     >
       <Subtitle>¿No te funciono el enlace?</Subtitle>
