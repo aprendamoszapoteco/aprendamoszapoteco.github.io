@@ -11,6 +11,7 @@ import './styles/index.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Content from './pages/Content';
+import About from './pages/About';
 
 const App = () => {
   return (
@@ -25,7 +26,7 @@ const App = () => {
             <Content />
           </Route>
           <Route path="/acerca-de">
-            <p>Acerca de</p>
+            <About />
           </Route>
         </Switch>
       </main>
