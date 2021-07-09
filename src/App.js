@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
 import 'bootstrap';
@@ -8,11 +8,12 @@ import '@fontsource/roboto';
 
 import './styles/index.css';
 
+const Content = React.lazy(() => import('./pages/Content'));
+const About = React.lazy(() => import('./pages/About'));
+const Footer = React.lazy(() => import('./components/Footer'));
 import Header from './components/Header';
-import Footer from './components/Footer';
-import Content from './pages/Content';
-import About from './pages/About';
 import Home from './pages/Home';
+import SpinnerLoading from './components/commons/SpinnerLoading';
 
 const App = () => {
   return (
@@ -24,14 +25,20 @@ const App = () => {
             <Home />
           </Route>
           <Route path="/contenido">
-            <Content />
+            <Suspense fallback={ <SpinnerLoading /> }>
+              <Content />
+            </Suspense>
           </Route>
           <Route path="/acerca-de">
-            <About />
+            <Suspense fallback={ <SpinnerLoading /> }>
+              <About />
+            </Suspense>
           </Route>
         </Switch>
       </main>
-      <Footer />
+      <Suspense fallback={ <SpinnerLoading /> }>
+        <Footer />
+      </Suspense>
     </BrowserRouter>
   );
 };

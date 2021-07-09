@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 
 import Presentation from '../components/views/Presentation';
-import Support from '../components/views/Support';
 import CardInformation from '../components/cards/CardInformation';
-import OtherDownloads from '../components/views/OtherDownloads';
+
+const OtherDownloads = React.lazy(() => import('../components/views/OtherDownloads'));
+const Support = React.lazy(() => import('../components/views/Support'));
+
+import SpinnerLoading from '../components/commons/SpinnerLoading';
 import {listHome} from '../data/home';
 
 const Home = () => {
@@ -24,8 +27,10 @@ const Home = () => {
           )
         }
       </div>
-      <OtherDownloads />
-      <Support />
+      <Suspense fallback={ <SpinnerLoading /> }>
+        <OtherDownloads />
+        <Support />
+      </Suspense>
     </>
   );
 };
