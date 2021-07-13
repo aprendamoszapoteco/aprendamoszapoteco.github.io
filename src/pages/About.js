@@ -18,7 +18,7 @@ const About = () => {
         <article style={ {paddingTop: '1.5rem'} }>
           <Subtitle>Ubicación</Subtitle>
           <p>
-            <strong>Dirección:</strong> Calle Laureles s/n Colonia Centro, Santo Domingo de Morelos, Oaxaca.
+            <strong>Dirección:</strong> Calle Linda Vista S/N, Barrio Cerro Hermoso, Santo Domingo de Morelos, Oaxaca.
           </p>
           <p>
             <strong>Distrito:</strong> Pochutla.

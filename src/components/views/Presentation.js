@@ -4,7 +4,7 @@ import ButtonMain from '../commons/ButtonMain';
 const Presentation = () => {
   return (
     <div
-      className="d-flex flex-column flex-lg-row justify-content-lg-between p-4 px-5"
+      className="d-flex flex-column flex-lg-row justify-content-lg-between align-items-center p-4 px-5"
       style={ {backgroundColor: '#3E3E3E'} }
     >
       <div className="pe-lg-4 text-white text-center">

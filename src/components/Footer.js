@@ -11,7 +11,7 @@ const Footer = () => {
       </div>
       <div style={ {lineHeight: '1.2rem'} }>
         <p className="mb-2 mb-lg-3">Creado por la Zona de Supervisión Indígena Núm. 184</p>
-        <p className="mb-4 mb-lg-0">Calle Laureles s/n Colonia Centro, Santo Domingo de Morelos, Oaxaca.</p>
+        <p className="mb-4 mb-lg-0">Calle Linda Vista S/N, Barrio Cerro Hermoso, Santo Domingo de Morelos, Oaxaca.</p>
       </div>
       <div className="d-flex justify-content-center align-items-center">
         <div style={ {width: '3rem', height: '3rem', overflow: 'hidden'} }>
