@@ -33,13 +33,13 @@ const About = () => {
           listarán el nombre de aquellos participantes que colaboraron con
           los audios, sin embargo, cabe mencionar la participación de muchas más personas.
         </p>
-        <p className="text-center" style={ {lineHeight: '1rem'} }>
+        <div className="text-center" style={ {lineHeight: '1rem'} }>
           { listParticipants &&
               listParticipants.map(value =>
                 <p key={ value }>{ value }</p>
               )
           }
-        </p>
+        </div>
       </section>
       <section
         style={ {padding: '1.5rem 0', background: '#F8F8F8'} }
