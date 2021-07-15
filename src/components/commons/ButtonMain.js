@@ -1,17 +1,16 @@
 import React, { useState } from 'react';
 import '../../styles/styleButtonMain.css';
+import data from '../../data/buttonMain';
 
 const ButtonMain = () => {
-  const links = [
-    'https://www.youtube.com/watch?v=IaK7D_o8VYw',
-    'https://www.youtube.com/watch?v=hZDaS9xyINI'
-  ];
-  const [platform, setPlatform] = useState(navigator.platform);
-  const [link, setLink] = useState(links[platform === 'Win32' ? 0 : 1]);
+  const temPlatform = navigator.platform === 'Win32' ? 'Win32' : 'LinuxDeb';
+  const [platform, setPlatform] = useState(temPlatform);
+  const [link, setLink] = useState(data[temPlatform].linkToDownload);
 
   const changePlatform = (e) => {
-    setPlatform(e.target.name);
-    setLink(links[e.target.name === 'Win32' ? 0 : 1]);
+    const newPlatform = e.target.name;
+    setPlatform(newPlatform);
+    setLink(data[newPlatform].linkToDownload);
   };
 
   return (
@@ -25,7 +24,7 @@ const ButtonMain = () => {
           fontSize: '18px',
           fontWeight: 'bold'
         } }
-        >Descarga para { platform === 'Win32' ? 'Windows' : 'Linux' }</p>
+        >Descarga para { data[platform].platform }</p>
         <p style={ {
           marginBottom: '4px',
           fontSize: '16px'
@@ -37,14 +36,16 @@ const ButtonMain = () => {
         <span className="visually-hidden">Toggle Dropdown</span>
       </button>
       <ul className="dropdown-menu">
-        <li>
-          <button className="dropdown-item" type="button"
-            name="Win32" onClick={ changePlatform }>Windows</button>
-        </li>
-        <li>
-          <button className="dropdown-item" type="button"
-            name="Linux" onClick={ changePlatform }>Linux</button>
-        </li>
+        { Object.keys(data).map((platformId, index) =>
+          <li key={ index }>
+            <button
+              className="dropdown-item"
+              type="button"
+              name={ platformId }
+              onClick={ changePlatform }
+            >{ data[platformId].platform }</button>
+          </li>)
+        }
       </ul>
     </div>
   );
