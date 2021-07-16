@@ -5,7 +5,7 @@ import data from '../../data/support';
 import Subtitle from '../commons/Subtitle';
 
 const EmailContact = styled.a`
-  color: #008DFF;
+  color: #0068BC;
   text-align: center;
   text-decoration: none;
   cursor: pointer;

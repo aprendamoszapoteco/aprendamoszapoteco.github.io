@@ -13,7 +13,7 @@ const Presentation = () => {
         <p className="mb-4">Zapoteco</p>
         <ButtonMain />
         <p className="mt-4 mb-0">Si el link no funciona</p>
-        <p><a href="#support" style={ {textDecoration: 'none'} }>presiona aqui</a></p>
+        <p><a href="#support" style={ {textDecoration: 'none', color: '#5AB6FF'} }>presiona aqui</a></p>
       </div>
       <div>
         <picture>
