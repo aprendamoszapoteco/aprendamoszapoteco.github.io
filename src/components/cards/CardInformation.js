@@ -13,7 +13,7 @@ import styled from 'styled-components';
  *  children -> The description of the card.
  */
 
-const Title = styled.p`
+const Title = styled.h3`
   font-size: 25px;
   font-weight: bold;
   margin-bottom: 20px;
@@ -30,7 +30,7 @@ const Information = styled.div`
   }
 `;
 
-const CardInformation = ({ pathImage, imageRight = false, title, children }) => {
+const CardInformation = ({ pathImage, altImage, imageRight = false, title, children }) => {
   const positionImage = imageRight && 'flex-lg-row-reverse' || 'flex-lg-row';
   const background = imageRight && '#F8F8F8' || '#DCEEF2';
   const classSpacing = imageRight && 'pe-lg-4' || 'ps-lg-4';
@@ -50,7 +50,11 @@ const CardInformation = ({ pathImage, imageRight = false, title, children }) => 
             srcSet={ require(`../../img/${pathImage}.webp`).default }
             className="mw-100 mh-100"
           />
-          <img src={ require(`../../img/${pathImage}.png`).default } className="mw-100 mh-100" />
+          <img
+            src={ require(`../../img/${pathImage}.png`).default }
+            className="mw-100 mh-100"
+            alt={ altImage }
+          />
         </picture>
       </div>
       <Information className={ classSpacing }>
@@ -62,9 +66,10 @@ const CardInformation = ({ pathImage, imageRight = false, title, children }) => 
 };
 
 CardInformation.propTypes = {
-  pathImage: PropTypes.string,
+  pathImage: PropTypes.string.isRequired,
+  altImage: PropTypes.string.isRequired,
   imageRight: PropTypes.bool,
-  title: PropTypes.string,
+  title: PropTypes.string.isRequired,
   children: PropTypes.node
 };
 

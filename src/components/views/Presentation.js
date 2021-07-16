@@ -21,8 +21,11 @@ const Presentation = () => {
             srcSet={ require('../../img/start/app.webp').default }
             className="img-fluid"
           />
-          <img src={ require('../../img/start/app.png') }
-            alt="Captura de la aplicación" className="img-fluid" />
+          <img
+            src={ require('../../img/start/app.png') }
+            alt="Captura de la aplicación"
+            className="img-fluid"
+          />
         </picture>
       </div>
     </div>
