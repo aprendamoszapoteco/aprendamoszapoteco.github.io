@@ -10,6 +10,7 @@ const Content = () => {
           key={ index }
           title={ obj.title }
           pathImage={ `content/${obj.image}` }
+          altImage={ obj.title }
           imageRight={ obj.imageRight }
         >{ obj.description }</CardInformation>
       )

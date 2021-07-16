@@ -20,6 +20,7 @@ const Home = () => {
               key={ index }
               title={ obj.title }
               pathImage={ `home/${obj.image}` }
+              altImage={ obj.title }
               imageRight={ obj.imageRight }
             >
               { obj.description }
