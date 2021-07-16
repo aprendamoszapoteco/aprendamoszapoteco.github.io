@@ -8,7 +8,7 @@ const Presentation = () => {
       style={ {backgroundColor: '#3E3E3E', minHeight: '85vh'} }
     >
       <div className="pe-lg-4 text-white text-center">
-        <h3 className="text-center fw-bold">{ 'Te\'dna distè' }</h3>
+        <h1 className="text-center fw-bold">{ 'Te\'dna distè' }</h1>
         <p className="mb-0">Aprendamos</p>
         <p className="mb-4">Zapoteco</p>
         <ButtonMain />

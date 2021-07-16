@@ -19,9 +19,9 @@ const Header = () => {
                 <img src={ require('../img/logo.png').default } alt="Logo" />
               </picture>
             </div>
-            <strong className="px-3" style={ {fontSize: '1rem', fontWeight: 'bold'} }>
+            <h2 className="px-3 my-auto" style={ {fontSize: '1rem', fontWeight: 'bold'} }>
               Aprendamos Zapoteco
-            </strong>
+            </h2>
           </a>
           <button className="navbar-toggler" type="button"
             data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
