@@ -5,7 +5,7 @@ const Presentation = () => {
   return (
     <div
       className="d-flex flex-column flex-lg-row justify-content-lg-between align-items-center p-4 px-5"
-      style={ {backgroundColor: '#3E3E3E'} }
+      style={ {backgroundColor: '#3E3E3E', minHeight: '85vh'} }
     >
       <div className="pe-lg-4 text-white text-center">
         <h3 className="text-center fw-bold">{ 'Te\'dna distè' }</h3>
