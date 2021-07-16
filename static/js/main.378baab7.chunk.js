@@ -1,2 +1,0 @@
-(this["webpackJsonpaprendamoszapoteco.github.io"]=this["webpackJsonpaprendamoszapoteco.github.io"]||[]).push([[0],{11:function(o,t,e){},14:function(o,t,e){"use strict";e.r(t);e(0);var n=e(3),c=e.n(n),a=(e(13),e(8),e(9),e(10),e(11),e(1)),i=function(){return Object(a.jsx)("p",{children:"Hola mundo"})};c.a.render(Object(a.jsx)(i,{}),document.getElementById("root"))}},[[14,1,2]]]);
-//# sourceMappingURL=main.378baab7.chunk.js.map
