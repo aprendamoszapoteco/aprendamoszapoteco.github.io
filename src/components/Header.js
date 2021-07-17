@@ -1,9 +1,16 @@
-import React from 'react';
-import {NavLink} from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 import '../styles/styleHeader.css';
 
 const Header = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-dark sticky-top">
