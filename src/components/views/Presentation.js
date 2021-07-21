@@ -9,7 +9,7 @@ const Presentation = () => {
     >
       <div className="pe-lg-4 text-white text-center">
         <h1 className="text-center fw-bold">{ 'Te\'dna distè' }</h1>
-        <h2 style={ {fontSize: '1.1rem'} }>
+        <h2 style={ {fontSize: '1.1rem', lineHeight: '1.6rem'} }>
           <p className="mb-0">Aprendamos</p>
           <p className="mb-4">Zapoteco</p>
         </h2>
