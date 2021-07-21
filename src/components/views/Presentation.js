@@ -9,8 +9,10 @@ const Presentation = () => {
     >
       <div className="pe-lg-4 text-white text-center">
         <h1 className="text-center fw-bold">{ 'Te\'dna distè' }</h1>
-        <p className="mb-0">Aprendamos</p>
-        <p className="mb-4">Zapoteco</p>
+        <h2 style={ {fontSize: '1.1rem'} }>
+          <p className="mb-0">Aprendamos</p>
+          <p className="mb-4">Zapoteco</p>
+        </h2>
         <ButtonMain />
         <p className="mt-4 mb-0">Si el link no funciona</p>
         <p><a href="#support" style={ {textDecoration: 'none', color: '#5AB6FF'} }>presiona aqui</a></p>
