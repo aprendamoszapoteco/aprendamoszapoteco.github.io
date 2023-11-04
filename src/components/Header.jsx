@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
+import styled from 'styled-components';
 
 import '../styles/styleHeader.css';
 
@@ -20,10 +21,12 @@ const Header = () => {
               <picture>
                 <source
                   srcSet={
-                    require('../img/logo.webp').default
+                    new URL('../img/logo.webp', import.meta.url).href
                   }
                 />
-                <img src={ require('../img/logo.png').default } alt="Logo" />
+                <img src={
+                  new URL('../img/logo.png', import.meta.url).href
+                } alt="Logo" />
               </picture>
             </div>
             <h2 className="px-3 my-auto" style={ {fontSize: '1rem', fontWeight: 'bold'} }>
@@ -40,32 +43,29 @@ const Header = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0" style={ {paddingRight: '5rem'} }>
               <li className="nav-item">
-                <NavLink
+                <CustomNavLink
                   className="personalized-link"
-                  activeClassName="active-link-page"
-                  exact
+                  end
                   to="/"
                 >
                   Inicio
-                </NavLink>
+                </CustomNavLink>
               </li>
               <li className="nav-item">
-                <NavLink
+                <CustomNavLink
                   className="personalized-link"
-                  activeClassName="active-link-page"
                   to="/contenido"
                 >
                   Contenido
-                </NavLink>
+                </CustomNavLink>
               </li>
               <li className="nav-item">
-                <NavLink
+                <CustomNavLink
                   className="personalized-link"
-                  activeClassName="active-link-page"
                   to="/acerca-de"
                 >
                   Acerca de
-                </NavLink>
+                </CustomNavLink>
               </li>
             </ul>
           </div>
@@ -81,5 +81,12 @@ const Header = () => {
     </>
   );
 };
+
+const CustomNavLink = styled(NavLink)`
+  &.active {
+    color: #fff !important;
+    font-weight: bold;
+  }
+`
 
 export default Header;

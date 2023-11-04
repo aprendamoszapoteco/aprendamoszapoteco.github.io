@@ -15,12 +15,12 @@ const OtherDownloads = () => {
               <picture>
                 <source
                   srcSet={
-                    require(`../../img/otherDownloads/${objectValue.nameToImage}.webp`).default
+                    new URL(`../../img/otherDownloads/${objectValue.nameToImage}.webp`, import.meta.url).href
                   }
                 />
                 <img
                   src={
-                    require(`../../img/otherDownloads/${objectValue.nameToImage}.png`).default
+                    new URL(`../../img/otherDownloads/${objectValue.nameToImage}.png`, import.meta.url).href
                   }
                   alt={ objectValue.nameToImage }
                 />

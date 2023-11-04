@@ -31,6 +31,8 @@ const Information = styled.div`
 `;
 
 const CardInformation = ({ pathImage, altImage, imageRight = false, title, children }) => {
+  const folder = pathImage.split('/')[0];
+  const image = pathImage.split('/')[1];
   const positionImage = imageRight && 'flex-lg-row-reverse' || 'flex-lg-row';
   const background = imageRight && '#F8F8F8' || '#DCEEF2';
   const classSpacing = imageRight && 'pe-lg-4' || 'ps-lg-4';
@@ -47,11 +49,11 @@ const CardInformation = ({ pathImage, altImage, imageRight = false, title, child
         <picture>
           <source
             type="image/webp"
-            srcSet={ require(`../../img/${pathImage}.webp`).default }
+            srcSet={ new URL(`../../img/${folder}/${image}.webp`, import.meta.url).href }
             className="mw-100 mh-100"
           />
           <img
-            src={ require(`../../img/${pathImage}.png`).default }
+            src={ new URL(`../../img/${folder}/${image}.png`, import.meta.url).href }
             className="mw-100 mh-100"
             alt={ altImage }
           />
