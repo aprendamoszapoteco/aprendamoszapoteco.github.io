@@ -17,11 +17,10 @@ const Footer = () => {
         <div style={ {width: '3rem', height: '3rem', overflow: 'hidden'} }>
           <picture>
             <source
-              srcSet={ require('../img/logo.webp').default }
               style={ {width: '100%', height: '100%', objectFit: 'contain'} }
             />
             <img
-              src={ require('../img/logo.png').default } alt="Logo"
+              src={ new URL('../img/logo.png', import.meta.url).href } alt="Logo"
               style={ {width: '100%', height: '100%', objectFit: 'contain'} }
             />
           </picture>

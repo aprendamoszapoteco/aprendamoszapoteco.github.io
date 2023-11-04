@@ -20,11 +20,11 @@ const Presentation = () => {
       <div>
         <picture>
           <source type="image/webp"
-            srcSet={ require('../../img/start/app.webp').default }
+            srcSet={ new URL('../../img/start/app.webp', import.meta.url).href }
             className="img-fluid"
           />
           <img
-            src={ require('../../img/start/app.png') }
+            src={ new URL('../../img/start/app.png', import.meta.url).href }
             alt="Captura de la aplicación"
             className="img-fluid"
           />

@@ -12,12 +12,12 @@ const CardDeveloper = ({ nameImage, fullName, links }) => {
             <picture className="container-img-developer">
               <source
                 srcSet={
-                  require(`../../img/developers/${nameImage}.webp`).default
+                  new URL(`../../img/developers/${nameImage}.webp`, import.meta.url).href
                 }
               />
               <img
                 src={
-                  require(`../../img/developers/${nameImage}.png`).default
+                  new URL(`../../img/developers/${nameImage}.png`, import.meta.url).href
                 }
                 alt={ fullName }
               />
