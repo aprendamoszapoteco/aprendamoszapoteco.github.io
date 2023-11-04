@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { otherDownloads } from '../../data/otherDownloads';
 import ButtonOption from '../commons/ButtonOption';
 

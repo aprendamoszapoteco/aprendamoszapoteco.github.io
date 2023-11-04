@@ -1,4 +1,3 @@
-import React from 'react';
 import ButtonMain from '../commons/ButtonMain';
 
 const Presentation = () => {
@@ -17,7 +16,7 @@ const Presentation = () => {
         <p className="mt-4 mb-0">Si el link no funciona</p>
         <p><a href="#support" style={ {textDecoration: 'none', color: '#5AB6FF'} }>presiona aqui</a></p>
       </div>
-      <div>
+      <div style={{ objectFit: 'contain', width: '60%' }}>
         <picture>
           <source type="image/webp"
             srcSet={ new URL('../../img/start/app.webp', import.meta.url).href }
@@ -26,6 +25,7 @@ const Presentation = () => {
           <img
             src={ new URL('../../img/start/app.png', import.meta.url).href }
             alt="Captura de la aplicación"
+            style={{ borderRadius: '10px' }}
             className="img-fluid"
           />
         </picture>

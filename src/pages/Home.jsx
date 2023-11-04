@@ -1,10 +1,10 @@
-import React, { Suspense } from 'react';
+import { Suspense, lazy } from 'react';
 
 import Presentation from '../components/views/Presentation';
 import CardInformation from '../components/cards/CardInformation';
 
-const OtherDownloads = React.lazy(() => import('../components/views/OtherDownloads'));
-const Support = React.lazy(() => import('../components/views/Support'));
+const OtherDownloads = lazy(() => import('../components/views/OtherDownloads'));
+const Support = lazy(() => import('../components/views/Support'));
 
 import SpinnerLoading from '../components/commons/SpinnerLoading';
 import {listHome} from '../data/home';
