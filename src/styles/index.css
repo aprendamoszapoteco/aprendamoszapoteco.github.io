@@ -8,3 +8,6 @@ body {
 
   color: #000000;
 }
+main {
+  min-height: 80vh;
+}

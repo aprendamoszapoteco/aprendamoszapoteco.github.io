@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import '../../styles/styleButtonMain.css';
 import data from '../../data/buttonMain';
 

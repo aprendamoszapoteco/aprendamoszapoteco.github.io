@@ -1,9 +1,10 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 
 import '../styles/styleHeader.css';
+import { VERSION_APP } from '../data/config';
 
 const Header = () => {
   const { pathname } = useLocation();
@@ -75,7 +76,7 @@ const Header = () => {
         <span
           style={ {padding: '0.5rem', color: '#ffffffcc', fontSize: '0.9rem'} }
         >
-          Esta es la versión 1.0 de la aplicación de escritorio
+          Esta es la versión { VERSION_APP } de la aplicación de escritorio
         </span>
       </section>
     </>

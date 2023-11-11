@@ -1,4 +1,3 @@
-import React from 'react';
 import CardInformation from '../components/cards/CardInformation';
 import data from '../data/content';
 

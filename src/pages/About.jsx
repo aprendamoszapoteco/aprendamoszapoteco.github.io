@@ -1,5 +1,3 @@
-import React from 'react';
-
 import Subtitle from '../components/commons/Subtitle';
 import CardDeveloper from '../components/cards/CardDeveloper';
 import {listParticipants, listDataDevelopers} from '../data/about';
