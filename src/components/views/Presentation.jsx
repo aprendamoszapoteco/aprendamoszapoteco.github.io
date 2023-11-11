@@ -6,7 +6,7 @@ const Presentation = () => {
       className="d-flex flex-column flex-lg-row justify-content-lg-between align-items-center p-4 px-5"
       style={ {backgroundColor: '#3E3E3E', minHeight: '85vh'} }
     >
-      <div className="pe-lg-4 text-white text-center">
+      <div className="pe-lg-4 text-white text-center flex-fill">
         <h1 className="text-center fw-bold">{ 'Te\'dna distè' }</h1>
         <h2 style={ {fontSize: '1.1rem', lineHeight: '1.6rem'} }>
           <p className="mb-0">Aprendamos</p>
