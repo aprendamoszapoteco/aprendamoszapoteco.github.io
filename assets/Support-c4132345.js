@@ -1,4 +1,4 @@
-import{s as a,j as e}from"./index-43adff1f.js";import{S as r}from"./Subtitle-3e6a4bf2.js";const n=["aprendamoszapoteco@gmail.com","eleomarpedrolorenzo@gmail.com","galvantorres2410@gmail.com","martin.monjaraz.almaraz@gmail.com"],l=a.a`
+import{s as a,j as e}from"./index-2e26794c.js";import{S as r}from"./Subtitle-6d95b87d.js";const n=["aprendamoszapoteco@gmail.com","eleomarpedrolorenzo@gmail.com","galvantorres2410@gmail.com","martin.monjaraz.almaraz@gmail.com"],l=a.a`
   color: #0068BC;
   text-align: center;
   text-decoration: none;
