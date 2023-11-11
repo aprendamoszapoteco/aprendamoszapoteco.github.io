@@ -1,6 +1,6 @@
 import { Suspense, lazy } from 'react';
 import { Routes, Route} from 'react-router-dom';
-import {Helmet} from 'react-helmet';
+import Helmet from 'react-helmet';
 
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -39,14 +39,14 @@ const App = () => {
           <Route path='contenido'
             element={
               <>
-                <Suspense fallback={ <SpinnerLoading /> }>
-                  <Helmet>
-                    <title>Contenido | Aprendamos Zapoteco del Sur</title>
-                    <meta
-                      name="description"
-                      content="Consulta las secciones generales, así como una breve descripción, con las que cuenta esta aplicación de escritorio denominada Aprendamos Zapoteco del Sur."
-                    />
-                  </Helmet>
+                <Helmet>
+                  <title>Contenido | Aprendamos Zapoteco del Sur</title>
+                  <meta
+                    name="description"
+                    content="Consulta las secciones generales, así como una breve descripción, con las que cuenta esta aplicación de escritorio denominada Aprendamos Zapoteco del Sur."
+                  />
+                </Helmet>
+                <Suspense fallback={ <SpinnerLoading /> }>  
                   <Content />
                 </Suspense>
               </>
@@ -54,7 +54,7 @@ const App = () => {
           />
           <Route path='acerca-de'
             element={
-              <Suspense fallback={ <SpinnerLoading /> }>
+              <>
                 <Helmet>
                   <title>Acerca de | Aprendamos Zapoteco del Sur</title>
                   <meta
@@ -62,8 +62,10 @@ const App = () => {
                     content="Descubre el lugar de origen de esta aplicación de escritorio para aprender zapoteco, así como también algunos de sus participantes, y también información sobre sus desarrolladores."
                   />
                 </Helmet>
-                <About />
-              </Suspense>
+                <Suspense fallback={ <SpinnerLoading /> }> 
+                  <About />
+                </Suspense>
+              </>
             }
           />
         </Routes>
