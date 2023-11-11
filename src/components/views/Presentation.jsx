@@ -1,4 +1,5 @@
 import ButtonMain from '../commons/ButtonMain';
+import styled from 'styled-components';
 
 const Presentation = () => {
   return (
@@ -6,7 +7,7 @@ const Presentation = () => {
       className="d-flex flex-column flex-lg-row justify-content-lg-between align-items-center p-4 px-5"
       style={ {backgroundColor: '#3E3E3E', minHeight: '85vh'} }
     >
-      <div className="pe-lg-4 text-white text-center flex-fill">
+      <div className="pe-lg-4 text-white text-center flex-md-fill">
         <h1 className="text-center fw-bold">{ 'Te\'dna distè' }</h1>
         <h2 style={ {fontSize: '1.1rem', lineHeight: '1.6rem'} }>
           <p className="mb-0">Aprendamos</p>
@@ -16,7 +17,7 @@ const Presentation = () => {
         <p className="mt-4 mb-0">Si el link no funciona</p>
         <p><a href="#support" style={ {textDecoration: 'none', color: '#5AB6FF'} }>presiona aqui</a></p>
       </div>
-      <div style={{ objectFit: 'contain', width: '60%' }}>
+      <DivImage style={{ objectFit: 'contain' }}>
         <picture>
           <source type="image/webp"
             srcSet={ new URL('../../img/start/app.webp', import.meta.url).href }
@@ -29,9 +30,21 @@ const Presentation = () => {
             className="img-fluid"
           />
         </picture>
-      </div>
+      </DivImage>
     </div>
   );
 };
 
+const DivImage = styled.div`
+  width: 60%;
+  @media screen and (max-width: 800px){
+    width: 80%;
+  }
+  @media screen and (max-width: 700px){
+    width: 90%;
+  }
+  @media screen and (max-width: 500px){
+    width: 100%;
+  }
+`;
 export default Presentation;
