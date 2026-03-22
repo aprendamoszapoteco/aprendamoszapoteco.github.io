@@ -19,11 +19,11 @@ const Presentation = () => {
       <DivImage style={{ objectFit: 'contain' }}>
         <picture>
           <source type="image/webp"
-            srcSet={ new URL('../../img/start/app.webp', import.meta.url).href }
+            srcSet={ new URL('../../img/start/app1-1-0.webp', import.meta.url).href }
             className="img-fluid"
           />
           <img
-            src={ new URL('../../img/start/app.png', import.meta.url).href }
+            src={ new URL('../../img/start/app1-1-0.png', import.meta.url).href }
             alt="Captura de la aplicación"
             style={{ borderRadius: '10px' }}
             className="img-fluid"
