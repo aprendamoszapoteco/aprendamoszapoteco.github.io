@@ -68,6 +68,14 @@ const Header = () => {
                   Acerca de
                 </CustomNavLink>
               </li>
+              <li className="nav-item">
+                <CustomNavLink
+                  className="personalized-link"
+                  to="/otras-versiones"
+                >
+                  Otras versiones
+                </CustomNavLink>
+              </li>
             </ul>
           </div>
         </div>

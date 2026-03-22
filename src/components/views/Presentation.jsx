@@ -14,8 +14,7 @@ const Presentation = () => {
           <p className="mb-4">Zapoteco</p>
         </h2>
         <ButtonMain />
-        <p className="mt-4 mb-0">Si el link no funciona</p>
-        <p><a href="#support" style={ {textDecoration: 'none', color: '#5AB6FF'} }>presiona aqui</a></p>
+        <p className="pt-2"><a href="#support" onClick={(e) => { e.preventDefault(); document.getElementById('support')?.scrollIntoView({ behavior: 'smooth' }); }} style={ {textDecoration: 'none', color: '#5AB6FF'} }>Otras plataformas</a></p>
       </div>
       <DivImage style={{ objectFit: 'contain' }}>
         <picture>

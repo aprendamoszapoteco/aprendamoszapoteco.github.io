@@ -11,6 +11,7 @@ import './styles/index.css';
 
 const Content = lazy(() => import('./pages/Content'));
 const About = lazy(() => import('./pages/About'));
+const OtherVersions = lazy(() => import('./pages/OtherVersions'));
 const Footer = lazy(() => import('./components/Footer'));
 import Header from './components/Header';
 import Home from './pages/Home';
@@ -64,6 +65,22 @@ const App = () => {
                 </Helmet>
                 <Suspense fallback={ <SpinnerLoading /> }> 
                   <About />
+                </Suspense>
+              </>
+            }
+          />
+          <Route path='otras-versiones'
+            element={
+              <>
+                <Helmet>
+                  <title>Otras versiones | Aprendamos Zapoteco del Sur</title>
+                  <meta
+                    name="description"
+                    content="Consulta y descarga versiones anteriores de la aplicación Aprendamos Zapoteco del Sur."
+                  />
+                </Helmet>
+                <Suspense fallback={ <SpinnerLoading /> }> 
+                  <OtherVersions />
                 </Suspense>
               </>
             }
