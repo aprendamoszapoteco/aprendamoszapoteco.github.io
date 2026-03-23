@@ -1,0 +1,7 @@
+import{o as i,j as s,s as c}from"./index-b66df2b3.js";const m=()=>{const a=[];return i.forEach(e=>{Object.keys(e.dataDownload).filter(t=>t!=="current").forEach(t=>{a.push({versionTitle:e.version||`Versión de ${e.nameToImage}`,description:e.dataDownload[t].description||`Versión oficial para ${e.nameToImage}.`,date:t,links:e.dataDownload[t].links,operatingSystems:e.operatingSystem})})}),a.sort((e,r)=>new Date(r.date)-new Date(e.date)),s.jsxs("div",{className:"container py-5",style:{minHeight:"60vh"},children:[s.jsx("h2",{className:"text-center mb-5",style:{color:"#3E3E3E",fontWeight:"bold"},children:"Otras versiones"}),s.jsx("div",{className:"row justify-content-center",children:s.jsx("div",{className:"col-md-8",children:a.length>0?a.map((e,r)=>s.jsx(l,{className:"card shadow-sm mb-4",children:s.jsxs("div",{className:"card-body",children:[s.jsx("h4",{className:"card-title text-primary",children:e.versionTitle}),s.jsxs("h6",{className:"card-subtitle mb-3 text-muted",children:["Fecha: ",e.date]}),s.jsx("p",{className:"card-text",children:e.description}),s.jsx("div",{className:"d-flex gap-2 flex-wrap mt-3",children:e.links.map((t,n)=>s.jsxs("a",{href:t,className:"btn btn-outline-primary",target:"_blank",rel:"noreferrer",children:["Descargar ",e.operatingSystems[n]||""]},n))})]})},r)):s.jsx("p",{className:"text-center text-muted",children:"No hay versiones anteriores disponibles en este momento."})})})]})},l=c.div`
+  transition: transform 0.2s;
+  border-radius: 10px;
+  &:hover {
+    transform: translateY(-5px);
+  }
+`;export{m as default};

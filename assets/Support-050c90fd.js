@@ -1,4 +1,4 @@
-import{s as n,j as e}from"./index-6badcd11.js";import{S as s}from"./Subtitle-e2b8399e.js";const r=["aprendamoszapoteco@gmail.com"],a=n.a`
+import{s as n,j as e}from"./index-b66df2b3.js";import{S as s}from"./Subtitle-f49ecaa1.js";const r=["aprendamoszapoteco@gmail.com"],a=n.a`
   color: #0068BC;
   text-align: center;
   text-decoration: none;
