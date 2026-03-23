@@ -8,19 +8,26 @@ on:
     branches:
       - main
 
+# Permisos necesarios para que GITHUB_TOKEN pueda escribir en la rama gh-pages
+permissions:
+  contents: write
+
 jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
+    # Esta línea asegura que el Action solo se ejecute en el repositorio original y no en forks.
+    # Reemplaza 'USUARIO' con el nombre del usuario u organización dueña del repositorio padre.
+    if: github.repository == 'aprendamoszapoteco/aprendamoszapoteco.github.io'
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Installing Node.js
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v4
         with:
-          node-version: 20.x
+          node-version: 20
 
       - name: Installing NPM packages
         run: npm i
@@ -29,7 +36,7 @@ jobs:
         run: npm run build
 
       - name: Uploading production-ready build files
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: production-files
           path: ./dist
@@ -38,17 +45,18 @@ jobs:
     name: Deploy
     needs: build
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
+    # Se agrega también la condición aquí por seguridad
+    if: github.ref == 'refs/heads/main' && github.repository == 'aprendamoszapoteco/aprendamoszapoteco.github.io'
 
     steps:
       - name: Downloading artifact
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4
         with:
           name: production-files
           path: ./dist
 
       - name: Deploying to gh-pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
