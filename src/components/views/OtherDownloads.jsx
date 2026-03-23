@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { otherDownloads } from '../../data/otherDownloads';
 import ButtonOption from '../commons/ButtonOption';
 
@@ -33,7 +34,7 @@ const OtherDownloads = () => {
                   >
                     <ButtonOption
                       operatingSystem={ value }
-                      href={ objectValue.linksToDownload[index] }
+                      href={ objectValue.dataDownload.current.links[index] }
                       suportedVersions={ objectValue.suportedVersions[index] }
                       isLittle={ objectValue.operatingSystem.length > 1 }
                     />
@@ -44,6 +45,11 @@ const OtherDownloads = () => {
           </div>
         )
       }
+      <div className="w-100 text-center mt-3">
+        <Link to="/otras-versiones" style={{ textDecoration: 'underline', color: '#0068BC', fontSize: '1.1rem' }}>
+          Otras versiones anteriores...
+        </Link>
+      </div>
     </section>
   );
 };

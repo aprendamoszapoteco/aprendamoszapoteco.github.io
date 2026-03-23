@@ -14,17 +14,16 @@ const Presentation = () => {
           <p className="mb-4">Zapoteco</p>
         </h2>
         <ButtonMain />
-        <p className="mt-4 mb-0">Si el link no funciona</p>
-        <p><a href="#support" style={ {textDecoration: 'none', color: '#5AB6FF'} }>presiona aqui</a></p>
+        <p className="pt-2"><a href="#support" onClick={(e) => { e.preventDefault(); document.getElementById('support')?.scrollIntoView({ behavior: 'smooth' }); }} style={ {textDecoration: 'none', color: '#5AB6FF'} }>Otras plataformas</a></p>
       </div>
       <DivImage style={{ objectFit: 'contain' }}>
         <picture>
           <source type="image/webp"
-            srcSet={ new URL('../../img/start/app.webp', import.meta.url).href }
+            srcSet={ new URL('../../img/start/app1-1-0.webp', import.meta.url).href }
             className="img-fluid"
           />
           <img
-            src={ new URL('../../img/start/app.png', import.meta.url).href }
+            src={ new URL('../../img/start/app1-1-0.png', import.meta.url).href }
             alt="Captura de la aplicación"
             style={{ borderRadius: '10px' }}
             className="img-fluid"
